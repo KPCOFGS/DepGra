@@ -55,6 +55,9 @@ DepGra exists to fill that gap:
 ## Quick Start
 
 ```bash
+# Clone the repository
+git clone https://github.com/KPCOFGS/DepGra.git
+
 # Install
 cd backend && uv venv .venv && source .venv/bin/activate && uv pip install -r requirements.txt && cd ..
 cd frontend && npm install && npm run build && cd ..
