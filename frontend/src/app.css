@@ -1,0 +1,91 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color-scheme: dark;
+  color: #e6edf3;
+  background: #0f1117;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0f1117;
+  overflow: hidden;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+/* Tooltip */
+.cy-tooltip {
+  background: #1c2128;
+  border: 1px solid #30363d;
+  color: #e6edf3;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  pointer-events: none;
+  z-index: 10000;
+  max-width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  line-height: 1.4;
+}
+
+/* Utility classes */
+.text-critical { color: #f85149; }
+.text-high { color: #f0883e; }
+.text-medium { color: #d29922; }
+.text-low { color: #8b949e; }
+
+.bg-critical { background: #f85149; }
+.bg-high { background: #f0883e; }
+.bg-medium { background: #d29922; }
+.bg-low { background: #8b949e; }
+
+/* Focus outlines */
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 2px solid #58a6ff;
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: #58a6ff44;
+  color: #e6edf3;
+}
