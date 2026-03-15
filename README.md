@@ -16,6 +16,19 @@ DepGra exists to fill that gap:
 - **Run anywhere** — no Docker, no external database, no cloud account. A single `python run.py` and you're scanning
 - **Integrate into CI/CD** — the CLI mode exits non-zero when vulnerabilities exceed a severity threshold, so you can gate merges on supply chain safety
 
+## How DepGra Compares
+
+| Capability | `npm audit` / `pip audit` | Snyk / Semgrep | DepGra |
+|---|---|---|---|
+| Multi-ecosystem scanning | One ecosystem per tool | Multi (paid plans) | npm, PyPI, Cargo, Go — one tool |
+| Visual dependency graph | No — flat list | Limited (SaaS only) | Interactive DAG in browser |
+| Risk ranking by graph position | No — sorted by severity only | Basic priority scoring | Centrality-based — ranks chokepoint packages higher |
+| Attack path visualization | No | Partial | Full path from root to vulnerable package |
+| Transitive dependency resolution | Built-in for that ecosystem | Yes | Yes, including PyPI `requirements.txt` |
+| CI/CD integration | `--audit-level` (npm only) | Yes (proprietary) | `--fail-on SEVERITY` for all ecosystems |
+| Self-hosted / offline | N/A (CLI tool) | No — cloud SaaS | Yes — runs fully local, no account needed |
+| Cost | Free | Free tier + paid | Free and open source |
+
 ## Features
 
 - **4 ecosystem support** — npm, PyPI, Cargo (crates.io), and Go
