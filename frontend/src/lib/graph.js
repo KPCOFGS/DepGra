@@ -191,17 +191,15 @@ export function initGraph(container, elements, onNodeClick) {
         style: {
           opacity: 1,
           'border-width': 4,
-          'border-color': '#d2a8ff',
           'z-index': 999,
+          'text-opacity': 1,
         },
       },
       {
         selector: 'edge.highlighted',
         style: {
-          opacity: 1,
+          opacity: 0.8,
           width: 2.5,
-          'line-color': '#d2a8ff',
-          'target-arrow-color': '#d2a8ff',
           'z-index': 999,
         },
       },
@@ -224,9 +222,28 @@ export function initGraph(container, elements, onNodeClick) {
 
   dagLayout(cy);
 
-  // --- Click ---
+  // --- Click: highlight node + connected edges + neighbors ---
   cy.on('tap', 'node', function (evt) {
-    if (onNodeClick) onNodeClick(evt.target.data());
+    const node = evt.target;
+    // Clear previous selection
+    cy.elements().removeClass('faded highlighted');
+    // Fade everything
+    cy.elements().addClass('faded');
+    // Highlight clicked node
+    node.removeClass('faded').addClass('highlighted');
+    // Highlight connected edges
+    node.connectedEdges().removeClass('faded').addClass('highlighted');
+    // Highlight neighbor nodes
+    node.neighborhood('node').removeClass('faded').addClass('highlighted');
+
+    if (onNodeClick) onNodeClick(node.data());
+  });
+
+  // Click background to reset
+  cy.on('tap', function (evt) {
+    if (evt.target === cy) {
+      cy.elements().removeClass('faded highlighted');
+    }
   });
 
   // --- Tooltip ---
