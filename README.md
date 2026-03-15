@@ -26,7 +26,7 @@ DepGra exists to fill that gap:
 | Attack path visualization | No | Partial | Full path from root to vulnerable package |
 | Transitive dependency resolution | Built-in for that ecosystem | Yes | Yes, including PyPI `requirements.txt` |
 | CI/CD integration | `--audit-level` (npm only) | Yes (proprietary) | `--fail-on SEVERITY` for all ecosystems |
-| Self-hosted / offline | N/A (CLI tool) | No — cloud SaaS | Yes — runs fully local, no account needed |
+| Self-hosted / offline | Yes — runs fully local | No — cloud SaaS | Yes — runs fully local, no account needed |
 | Cost | Free / open source | Free tier + paid | Free and open source |
 
 ## Features
