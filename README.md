@@ -2,7 +2,12 @@
 
 Dependency vulnerability tracker that visualizes your software supply chain as an interactive graph.
 
-![DepGra Screenshot](docs/screenshot.png)
+![DepGra Screenshot](docs/1.png)
+![DepGra Screenshot](docs/2.png)
+![DepGra Screenshot](docs/3.png)
+![DepGra Screenshot](docs/4.png)
+![DepGra Screenshot](docs/5.png)
+![DepGra Screenshot](docs/6.png)
 
 ## Why DepGra?
 
