@@ -27,7 +27,7 @@ DepGra exists to fill that gap:
 | Transitive dependency resolution | Built-in for that ecosystem | Yes | Yes, including PyPI `requirements.txt` |
 | CI/CD integration | `--audit-level` (npm only) | Yes (proprietary) | `--fail-on SEVERITY` for all ecosystems |
 | Self-hosted / offline | N/A (CLI tool) | No — cloud SaaS | Yes — runs fully local, no account needed |
-| Cost | Free | Free tier + paid | Free and open source |
+| Cost | Free / open source | Free tier + paid | Free and open source |
 
 ## Features
 
